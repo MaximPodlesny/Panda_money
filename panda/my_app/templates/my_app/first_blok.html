@@ -1,0 +1,77 @@
+{% load static %}
+
+<div class="first">
+    <div class="present-block">
+        <div class="left">
+            <h1 class="main__title">Получи 20 лучших предложений до 300.000 тенге со ставкой от 0.1%</h1>
+            <h3 class="main__subtitle">После заполнения с вами свяжется персональный менеджер, чтобы выбрать самые выгодные условия</h3>
+        </div>
+        <div class="right">
+            <img src="{% static 'my_app/images/panda.png' %}" alt="">
+        </div>
+    </div>
+    <form id="firstForm" class="first-form-1" method="post">
+        {% csrf_token %}
+        <div class="first__form">
+            <div class="form__input">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <input type="text" name="amount" data-type="currency" placeholder=" " />
+                        <label class="floating-label">Сумма</label>
+                        <button class="currency-toggle">₸</button>
+                    </div>
+                    <div class="error-message"></div>
+                    <div class="currency-list">
+                        <div class="currency-option selected" data-currency="₸" data-min="5000" data-max="300000">
+                            Казахстанский тенге
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__input">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <input type="text" name="term" data-type="number" placeholder=" " />
+                        <label class="floating-label">Срок</label>
+                        <button class="currency-toggle">дн.</button>
+                    </div>
+                    <div class="error-message"></div>
+                    <div class="currency-list">
+                        <div class="currency-option selected" data-currency="дн." data-min="1" data-max="1000">
+                            Дней
+                        </div>
+                        <div class="currency-option" data-currency="мес." data-min="1" data-max="300">
+                            Месяцев
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Скрытые поля для передачи выбранных данных -->
+            <input type="hidden" name="currency" value="₸" id="currencyField">
+            <input type="hidden" name="time" value="дн." id="timeField">
+
+            <button type="submit" id="firstBtn" class="main-btn">Продолжить</button>
+        </div>
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    </form>
+    <ul class="first__items">
+        <li class="first__item">
+            <div class="first__item-img">
+                <img src="{% static 'my_app/images/wallet.svg' %}" alt="">
+            </div>
+            <div class="first__item-text">Укажите сумму, которая вам необходима, и срок микрокредита</div>
+        </li>
+        <li class="first__item">
+            <div class="first__item-img">
+                <img src="{% static 'my_app/images/man.svg' %}" alt="">
+            </div>
+            <div class="first__item-text">Заполните важные поля для составления заявки</div>
+        </li>
+        <li class="first__item">
+            <div class="first__item-img">
+                <img src="{% static 'my_app/images/building.svg' %}" alt="">
+            </div>
+            <div class="first__item-text">Выберите подходящую МФО и оформите микрокредит</div>
+        </li>
+    </ul>
+</div>

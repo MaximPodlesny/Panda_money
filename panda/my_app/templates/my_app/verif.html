@@ -1,0 +1,113 @@
+{% load static %}
+
+<!-- <div class="verification-container">
+    <h3 class="verification-title">Подтверждение телефона</h3>
+    <h5 class="verification-subtitle">Мы отправим вам СМС-код с кодом подтверждения</h5>
+
+    <form id="verificationForm" class="verification-form">
+        <div class="input-group">
+            <div class="input-wrapper">
+                <input type="tel" id="phoneInput" name="phone" class="input-field phone-input" placeholder=" " required />
+                <label for="phoneInput" class="input-label">Номер телефона</label>
+                <div class="error-message" id="phoneError"></div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-wrapper">
+                <input type="text" id="codeInput" name="code" class="input-field number-input" placeholder=" " required />
+                <label for="codeInput" class="input-label">СМС-код</label>
+                <div class="error-message" id="codeError"></div>
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <label class="checkbox-label" id="dataConsentLabel">
+                <input type="checkbox" id="dataConsent" name="dataConsent" checked>
+                <span class="checkbox-checkmark"></span>
+                <span class="checkbox-text">Согласие на обработку <a href="javascript:void(0);" onclick="openNewWindow('static/my_app/documents/agreement+pd_fm.pdf')" class="link">персональных данных</a></span>
+            </label>
+            <div class="error-message" id="dataConsentError">Согласие на обработку персональных данных обязательно</div>
+        </div>
+
+        <div class="checkbox-group">
+            <label class="checkbox-label">
+                <input type="checkbox" name="marketingConsent" checked>
+                <span class="checkbox-checkmark"></span>
+                <span class="checkbox-text">Согласие на отправку <a href="javascript:void(0);" onclick="openNewWindow('static/my_app/documents/argeement_adv_fm.pdf')" class="link">рассылок рекламного</a> характера</span>
+            </label>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="form-buttons">
+            <button type="button" class="button-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                    <path fill="#162136" fill-rule="evenodd" d="m8.3 12.7 6 6c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L10.4 12l5.3-5.3c.4-.4.4-1 0-1.4s-1-.4-1.4 0l-6 6c-.4.4-.4 1 0 1.4" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <button type="submit" class="button-main">Получить код</button>
+        </div>
+    </form>
+
+    <div id="resultMessage" class="result-message"></div>
+</div>
+
+<script src="{% static 'my_app/js/js_vrf.js' %}"></script> Подключение скриптов -->
+
+<div class="verification-container">
+    <h3 class="verification-title">Подтверждение телефона</h3>
+    <h5 class="verification-subtitle">Мы отправим вам СМС-код с кодом подтверждения</h5>
+
+    <form id="verificationForm" class="verification-form">
+        <div class="input-group">
+            <div class="input-wrapper">
+                <input type="tel" id="phoneInput" name="phone" class="input-field phone-input" placeholder=" " required />
+                <label for="phoneInput" class="input-label">Номер телефона</label>
+                <div class="error-message" id="phoneError"></div>
+            </div>
+        </div>
+
+        <div class="input-group hidden" id="codeGroup">
+            <div class="input-wrapper">
+                <input type="text" id="codeInput" name="code" class="input-field number-input" placeholder=" " required />
+                <label for="codeInput" class="input-label">СМС-код</label>
+                <div class="error-message" id="codeError"></div>
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <label class="checkbox-label" id="dataConsentLabel">
+                <input type="checkbox" id="dataConsent" name="dataConsent" checked>
+                <span class="checkbox-checkmark"></span>
+                <span class="checkbox-text">Согласие на обработку <a href="javascript:void(0);" onclick="openNewWindow('static/my_app/documents/agreement+pd_fm.pdf')" class="link">персональных данных</a></span>
+            </label>
+            <div class="error-message" id="dataConsentError">Согласие на обработку персональных данных обязательно</div>
+        </div>
+
+        <div class="checkbox-group">
+            <label class="checkbox-label">
+                <input type="checkbox" name="marketingConsent" checked>
+                <span class="checkbox-checkmark"></span>
+                <span class="checkbox-text">Согласие на отправку <a href="javascript:void(0);" onclick="openNewWindow('static/my_app/documents/argeement_adv_fm.pdf')" class="link">рассылок рекламного</a> характера</span>
+            </label>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="form-buttons">
+            <button type="button" class="button-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                    <path fill="#162136" fill-rule="evenodd" d="m8.3 12.7 6 6c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L10.4 12l5.3-5.3c.4-.4.4-1 0-1.4s-1-.4-1.4 0l-6 6c-.4.4-.4 1 0 1.4" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <button type="submit" id="submitButton" class="button-main">Получить код</button>
+        </div>
+    </form>
+
+    <div id="resultMessage" class="result-message"></div>
+</div>
+<script src="{% static 'my_app/js/js_vrf.js' %}"></script>
+<!-- <script src="{% static 'scripts.js' %}"></script> Подключение скриптов -->
+
+

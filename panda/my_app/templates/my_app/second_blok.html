@@ -1,0 +1,57 @@
+<div class="second">
+    <h1 class="main__title">Заявка на займ</h1>
+    <div class="second-block">
+        
+        <div class="second-block__inner">
+        
+            <h3 class="second-block__title">Подтверждение телефона</h3>
+            <h5 class="second-block__subtitle">Мы отправим вам СМС-код с кодом подтверждения</h5>
+            <form id="verificationForm" class="verification-form">
+                {% csrf_token %}
+                <div class="second-block__input">
+                    <div class="input-container">
+                        <div class="input-wrapper">
+                            <input type="tel" id="phoneInput" data-type="phone" placeholder=" " class="phone-input" />
+                            <label class="floating-label">Номер телефона</label>
+                        </div>
+                        <div class="error-message"></div>
+                    </div>
+                </div>
+                <div class="second-block__input">
+                    <div class="input-container hidden" id="codeGroup">
+                        <div class="input-wrapper">
+                            <input type="text" id="codeInput" data-type="number" placeholder=" " class="number-input" />
+                            <label class="floating-label">СМС-код</label>
+                        </div>
+                        <div class="error-message"></div>
+                    </div>
+                </div>
+                <div class="checkbox-container">
+                    <label class="custom-checkbox" id="firstCheckboxLabel">
+                    <input type="checkbox" id="firstCheckbox" checked>
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Согласие на обработку <a href="javascript:void(0);" onclick="openNewWindow('./documents/agreement+pd_fm.pdf')" class="link">персональных данных</a></span>
+                    </label>
+                    <div class="error-message" id="firstCheckboxError">Согласие на обработку персональных данных обязательно</div>
+                </div>
+                <div class="checkbox-container">
+                    <label class="custom-checkbox">
+                    <input type="checkbox" checked>
+                    <span class="checkmark"></span>
+                    <span class="checkbox-text">Согласие на отправку <a href="javascript:void(0);" onclick="openNewWindow('./documents/argeement_adv_fm.pdf')" class="link">рассылок рекламного</a> характера</span>
+                    </label>
+                </div>
+                <hr>
+                <div class="second-block__buttons">
+                    <button class="prev-btn prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="#162136" fill-rule="evenodd" d="m8.3 12.7 6 6c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L10.4 12l5.3-5.3c.4-.4.4-1 0-1.4s-1-.4-1.4 0l-6 6c-.4.4-.4 1 0 1.4" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <button type="submit" id="getCodeBtn" class="main-btn">Получить код</button>
+                </div>
+            </form>
+            <!-- Поле для отображения результата -->
+            <div id="resultMessage"></div>
+        </div>
+        
+    </div>
+</div>

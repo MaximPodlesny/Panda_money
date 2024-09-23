@@ -1,0 +1,383 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'my_app/css/style.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'my_app/css/style_vrf.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'my_app/css/libs.min.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__logo">
+                <img src="{% static 'my_app/images/logo.svg' %}" alt="" height="48">
+            </div>
+            <!-- <div class="delete-block">
+                <div class="next">След</div>
+                <div class="prev">Пред</div>
+            </div> -->
+            <div class="partners">
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/1.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/2.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/3.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/4.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/5.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/6.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/7.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/8.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/9.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/10.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/11.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/12.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/13.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/14.svg' %}" alt="">
+                </div>
+                <div class="partner">
+                    <img src="{% static 'my_app/images/partners/15.svg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="main__inner">
+                
+                
+                {% include './first_blok.html' %}        
+                          
+                {% include './second_blok.html' %}
+                        
+                {% include './third_blok.html' %}
+                <div class="fourth">
+                    <div class="main__title center">Мы уже начали подбор предложений, менеджер свяжется с вами в течении 10 минут</div>
+                    <div class="main__timer">
+                        <div class="timer-container">
+                            <svg class="timer-svg" viewBox="0 0 100 100">
+                                <circle class="timer-circle" cx="50" cy="50" r="45"></circle>
+                                <circle class="timer-progress" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="timer-text">10:00</div>
+                        </div>
+                    </div>
+                    <div class="fourth__items">
+                        <div class="fourth__item">
+                            <div class="fourth__item-left">
+                                <div class="fourth__item-logo">
+                                    <img src="{% static 'my_app/images/partners/1.1.svg' %}" alt="">
+                                </div>
+                                <div class="fourth__item-info">
+                                    <div class="fourth__item-name">
+                                        Moneyman
+                                        <div class="fourth__item-rate">5.0</div>
+                                    </div>
+                                    <div class="fourth__item-subname">Микрокредит онлайн</div>
+                                </div>
+                            </div>
+                            <div class="fourth__item-right">
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Сумма</div>
+                                    до 300 000 ₸
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Срок</div>
+                                    до 30 дн.
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Ставка</div>
+                                    от 0,1 %
+                                </div>
+                            </div>
+                            <div class="alert"><span class="one">4</span> оформляют микрокредит прямо сейчас! Сегодня уже <span class="three">одобрено</span> <span class="two">22</span></div>
+                            <div class="action">Первые 7 дней под 0,1%!</div>
+                        </div>
+                        <div class="fourth__item">
+                            <div class="fourth__item-left">
+                                <div class="fourth__item-logo">
+                                    <img src="{% static 'my_app/images/partners/2.1.svg' %}" alt="">
+                                </div>
+                                <div class="fourth__item-info">
+                                    <div class="fourth__item-name">
+                                        ACredit
+                                        <div class="fourth__item-rate">3.7</div>
+                                    </div>
+                                    <div class="fourth__item-subname">Микрокредит онлайн</div>
+                                </div>
+                            </div>
+                            <div class="fourth__item-right">
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Сумма</div>
+                                    до 300 000 ₸
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Срок</div>
+                                    5 – 30 дн.
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Ставка</div>
+                                    от 0,01 %
+                                </div>
+                            </div>
+                            <div class="alert"><span class="one">4</span> оформляют микрокредит прямо сейчас! Сегодня уже <span class="three">одобрено</span> <span class="two">22</span></div>
+                            <div class="action">Промокод -95% "5UTD". Можно выиграть Apple ! 🍎🎁</div>
+                        </div>
+                        <div class="fourth__item">
+                            <div class="fourth__item-left">
+                                <div class="fourth__item-logo">
+                                    <img src="{% static 'my_app/images/partners/3.1.svg' %}" alt="">
+                                </div>
+                                <div class="fourth__item-info">
+                                    <div class="fourth__item-name">
+                                        TurboMoney
+                                        <div class="fourth__item-rate">5.0</div>
+                                    </div>
+                                    <div class="fourth__item-subname">Микрокредит онлайн</div>
+                                </div>
+                            </div>
+                            <div class="fourth__item-right">
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Сумма</div>
+                                    до 127 500 ₸
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Срок</div>
+                                    1 – 30 дн.
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Ставка</div>
+                                    0,28 %
+                                </div>
+                            </div>
+                            <div class="alert"><span class="one">4</span> оформляют микрокредит прямо сейчас! Сегодня уже <span class="three">одобрено</span> <span class="two">22</span></div>
+                            <div class="action">Лучшее одобрение за сегодня!</div>
+                        </div>
+                        <div class="fourth__item">
+                            <div class="fourth__item-left">
+                                <div class="fourth__item-logo">
+                                    <img src="{% static 'my_app/images/partners/4.1.svg' %}" alt="">
+                                </div>
+                                <div class="fourth__item-info">
+                                    <div class="fourth__item-name">
+                                        Vivus.kz
+                                        <div class="fourth__item-rate">3.7</div>
+                                    </div>
+                                    <div class="fourth__item-subname">Микрокредит онлайн</div>
+                                </div>
+                            </div>
+                            <div class="fourth__item-right">
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Сумма</div>
+                                    до 172 500 ₸
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Срок</div>
+                                    1 – 21 дн.
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Ставка</div>
+                                    0,01 – 0,95 %
+                                </div>
+                            </div>
+                            <div class="alert"><span class="one">4</span> оформляют микрокредит прямо сейчас! Сегодня уже <span class="three">одобрено</span> <span class="two">22</span></div>
+                            <div class="action"> Новинка! Отправляют деньги за 3 минуты </div>
+                        </div>
+                        <div class="fourth__item">
+                            <div class="fourth__item-left">
+                                <div class="fourth__item-logo">
+                                    <img src="{% static 'my_app/images/partners/5.1.svg' %}" alt="">
+                                </div>
+                                <div class="fourth__item-info">
+                                    <div class="fourth__item-name">
+                                        Credit 365
+                                        <div class="fourth__item-rate">5.0</div>
+                                    </div>
+                                    <div class="fourth__item-subname">Микрокредит онлайн</div>
+                                </div>
+                            </div>
+                            <div class="fourth__item-right">
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Сумма</div>
+                                    до 300 000 ₸
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Срок</div>
+                                    5 – 30 дн.
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Ставка</div>
+                                    от 0,01 %
+                                </div>
+                            </div>
+                            <div class="alert"><span class="one">4</span> оформляют микрокредит прямо сейчас! Сегодня уже <span class="three">одобрено</span> <span class="two">22</span></div>
+                            <div class="action"> Новая компания! ВЫГОДНО! </div>
+                        </div>
+                        <div class="fourth__item">
+                            <div class="fourth__item-left">
+                                <div class="fourth__item-logo">
+                                    <img src="{% static 'my_app/images/partners/7.1.svg' %}" alt="">
+                                </div>
+                                <div class="fourth__item-info">
+                                    <div class="fourth__item-name">
+                                        Tengebai.kz
+                                        <div class="fourth__item-rate">5.0</div>
+                                    </div>
+                                    <div class="fourth__item-subname">Микрокредит онлайн</div>
+                                </div>
+                            </div>
+                            <div class="fourth__item-right">
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Сумма</div>
+                                    до 300 000 ₸
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Срок</div>
+                                    5 – 30 дн.
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Ставка</div>
+                                    0,01 – 0,29 %
+                                </div>
+                            </div>
+                            <div class="alert"><span class="one">4</span> оформляют микрокредит прямо сейчас! Сегодня уже <span class="three">одобрено</span> <span class="two">22</span></div>
+                            <div class="action"> Одобряют большие суммы под 0,01% </div>
+                        </div>
+                        <div class="fourth__item">
+                            <div class="fourth__item-left">
+                                <div class="fourth__item-logo">
+                                    <img src="{% static 'my_app/images/partners/8.1.svg' %}" alt="">
+                                </div>
+                                <div class="fourth__item-info">
+                                    <div class="fourth__item-name">
+                                        Qanat.kz
+                                    </div>
+                                    <div class="fourth__item-subname">Микрокредит онлайн</div>
+                                </div>
+                            </div>
+                            <div class="fourth__item-right">
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Сумма</div>
+                                    до 127 500 ₸
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Срок</div>
+                                    до 30 дн.
+                                </div>
+                                <div class="fourth__item-value">
+                                    <div class="fourth__item-title">Ставка</div>
+                                    от 0,28 %
+                                </div>
+                            </div>
+                            <div class="alert"><span class="one">4</span> оформляют микрокредит прямо сейчас! Сегодня уже <span class="three">одобрено</span> <span class="two">22</span></div>
+                            <div class="action"> Одобряют с плохой историей 😉 </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__row">
+                    <div class="footer__logo">
+                        <img src="{% static 'my_app/images/logo2.svg' %}" alt="" height="48">
+                    </div>
+                    <ul class="footer__contacts">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                <path fill="#ECEFF1" fill-rule="evenodd" d="M12.903 12.997h-.075c-.805-.146-1.353-.77-1.821-1.347-.265-.326-.67-1.064-1.152-.98-.687.122-.347 1.408-.632 1.959-.232.444-1.218.364-1.897.286-2.145-.251-3.241-1.506-4.202-2.855C2.097 8.617 1.297 7.109.558 5.452.318 4.916 0 4.322 0 3.659c.348-.312.914-.205 1.487-.205.485 0 1.243-.117 1.599.082.211.117.425.742.596 1.142.391.917.751 1.573 1.227 2.325.205.324.522.937.892.855.359-.08.393-1.05.409-1.673.018-.705-.001-1.582-.186-1.956-.174-.354-.495-.36-.818-.57.27-.595 1.007-.653 1.896-.653.749 0 1.792-.092 2.083.448.296.549.093 1.54.075 2.283-.022.836-.154 1.697.371 2.08.404-.048.621-.48.855-.814.513-.738.83-1.375 1.228-2.325.163-.39.337-1.061.632-1.183.449-.186 1.165-.041 1.822-.041.538 0 1.5-.163 1.673.245.144.338-.279 1.192-.409 1.426-.498.897-.986 1.466-1.524 2.244-.214.31-.658.808-.632 1.303.021.379.365.667.632.939.578.588.982 1.017 1.451 1.674.176.247.556.78.52 1.1-.113.995-2.254.37-2.976.612" clip-rule="evenodd"></path>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                <path fill="#ECEFF1" fill-rule="evenodd" d="M4 5h2s0-3 .528-3.805C6.641.828 7.45 0 8.722 0c2.072 0 3.106.422 3.106.422l-.571 2.308s-.685-.198-1.323-.198c-1.043 0-.949-.084-.949 2.5h2.844l-.734 2.913H9v8.017H6V7.944H4z" clip-rule="evenodd"></path>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+                                <path fill="#ECEFF1" fill-rule="evenodd" d="m8.521 11.847-1.767 1.718c-.205.2-.368.368-.736.368l.25-3.751 6.822-6.157c.299-.266-.065-.395-.463-.154l-8.42 5.312L.57 8.048c-.785-.24-.791-.78.176-1.168l14.173-5.465c.647-.294 1.272.155 1.025 1.146L13.53 13.935c-.169.808-.657 1.002-1.334.628l-3.677-2.716z" clip-rule="evenodd"></path>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__row">
+                    <div class="left">
+                        <p>Сайт www.moneypanda.com принадлежит ТОО «Финансовый маркетплейс», БИН 221240034297.</p>
+                        <p>ТОО «Финансовый маркетплейс» не является банком, микрофинансовой организацией, не оказывает услуги, подпадающие под категорию банковских операций, микрофинансовую и/или любую иную финансовую деятельность, осуществление которой предполагает получение разрешения (лицензии) уполномоченного государственного органа Республики Казахстан.</p>
+                        <p>Сайт www.moneypanda.com не является интернет-ресурсом банков и/или микрофинансовых организаций и создан исключительно для предоставления информации об услугах, оказываемых третьими лицами, без их сравнения и намерения сформировать и/или поддерживать интерес к услугам, оказываемым определенным поставщиком.</p>
+                        <p>© Moneypanda, 2024</p>
+                    </div>
+                    <div class="right">
+                        <p>Наименование: Товарищество с ограниченной ответственностью «Финансовый Маркетплейс»</p>
+                        <p>Местонахождение: Казахстан, город Астана, район Алматы, Проспект Рақымжан Қошқарбаев, дом 10/1, н.п. 18, почтовый индекс 010000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'my_app/js/libs.min.js' %}"></script>
+    <script src="{% static 'my_app/js/formInput.js' %}"></script>
+    <script src="{% static 'my_app/js/select.js' %}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const firstCheckbox = document.getElementById('firstCheckbox');
+          const errorMessage = document.getElementById('firstCheckboxError');
+        
+          function validateCheckbox() {
+            if (!firstCheckbox.checked) {
+              errorMessage.style.display = 'block';
+            } else {
+              errorMessage.style.display = 'none';
+            }
+          }
+        
+          firstCheckbox.addEventListener('change', validateCheckbox);
+        
+          validateCheckbox();
+        });
+    </script>
+    <script>
+        function openNewWindow(url) {
+            window.open(url, '_blank', 'noopener,noreferrer');
+        }
+    </script>
+    <script src="{% static 'my_app/js/timer.js' %}"></script>
+    <script src="{% static 'my_app/js/main.js' %}"></script>
+    <script src="{% static 'my_app/js/js_vrf.js' %}"></script>
+    <script src="{% static 'my_app/js/data_of_client.js' %}"></script>
+    <script src="{% static 'my_app/js/first_form.js' %}"></script>
+</body>
+</html>

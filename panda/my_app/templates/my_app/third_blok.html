@@ -1,0 +1,81 @@
+{% load static %}
+
+<div class="third">
+    <h1 class="main__title">Заявка на займ</h1>
+    <div class="third-block">
+        <div class="third-block__inner">
+            <h3 class="third-block__title">Контактные данные</h3>
+            <h5 class="third-block__safetext">Ваши данные не попадут третьим лицам. Мы соблюдаем закон о защите персональных данных.</h5>
+            <form id="clientForm" class="client-form" method="post">
+                {% csrf_token %}
+                <div class="third-block__row">
+                    <div class="third-block__input">
+                        <div class="input-container">
+                            <div class="input-wrapper">
+                                <input type="text" name="last_name" data-type="text" placeholder=" " class="text-input" />
+                                <label class="floating-label">Фамилия</label>
+                            </div>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                    <div class="third-block__input">
+                        <div class="input-container">
+                            <div class="input-wrapper">
+                                <input type="text" name="first_name" data-type="text" placeholder=" " class="text-input" />
+                                <label class="floating-label">Имя</label>
+                            </div>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                    <div class="third-block__input">
+                        <div class="input-container">
+                            <div class="input-wrapper">
+                                <input type="text" name="middle_name" data-type="text" placeholder=" " class="text-input" />
+                                <label class="floating-label">Отчество</label>
+                            </div>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="third-block__row">
+                    <div class="third-block__input">
+                        <div class="input-container">
+                            <div class="input-wrapper">
+                                <input type="text" name="email" data-type="text" placeholder=" " class="text-input" />
+                                <label class="floating-label">Электронная почта</label>
+                            </div>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                    <div class="third-block__input">
+                        <div class="input-container">
+                            <div class="input-wrapper">
+                                <input type="text" name="inn" data-type="number" placeholder=" " class="number-input" />
+                                <label class="floating-label">ИНН</label>
+                            </div>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                    <div class="third-block__input">
+                        <div class="input-container">
+                            <div class="input-wrapper">
+                                <input type="text" name="id_card" data-type="number" placeholder=" " class="number-input" />
+                                <label class="floating-label">Удостоверение личности</label>
+                            </div>
+                            <div class="error-message"></div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="third-block__buttons">
+                    <button class="prev-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><path fill="#162136" fill-rule="evenodd" d="m8.3 12.7 6 6c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4L10.4 12l5.3-5.3c.4-.4.4-1 0-1.4s-1-.4-1.4 0l-6 6c-.4.4-.4 1 0 1.4" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <button type="submit" id="clientBtn" class="main-btn">Продолжить</button>
+                </div>
+                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+            </form>
+            <div id="resultMessage"></div>
+        </div>
+    </div>
+</div>
